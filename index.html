@@ -2,40 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Healthy Journey Recipes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ===== BOOTSTRAP CSS ===== -->
+<title>Healthy Journey Recipes</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-/* ===== CUSTOM CSS ===== */
+/* ===== Custom Styles ===== */
 body {
     background-color: #f5fff5;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+/* Header */
 header {
     background: #2e7d32;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
-/* NAVIGATION OVERRIDE */
+/* Navbar links */
 .navbar-nav .nav-link {
     font-weight: bold;
 }
 
-/* HEADINGS */
+/* Headings */
 h2 {
     color: #2e7d32;
     margin-bottom: 15px;
 }
 
-/* CARDS */
+/* Cards */
 .card-custom {
     background: white;
     padding: 15px;
@@ -44,44 +42,38 @@ h2 {
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* GALLERY */
+/* Gallery */
 .gallery img {
     width: 30%;
     margin: 10px;
     border-radius: 10px;
 }
 
-/* ACCORDION CUSTOM */
-.accordion-custom {
+/* Footer */
+footer {
     background: #2e7d32;
     color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    text-align: left;
-    border-radius: 5px;
-    margin-top: 10px;
+    padding: 15px 0;
 }
 
-.panel {
-    display: none;
-    background: #e8f5e9;
-    padding: 10px;
-    border-radius: 5px;
+/* Buttons */
+.btn-custom {
+    background: #2e7d32;
+    color: white;
+}
+.btn-custom:hover {
+    background: #1b5e20;
 }
 
-/* MODAL */
+/* Modal */
 .modal-custom {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
+    z-index: 1050;
 }
-
 .modal-content-custom {
     background: white;
     padding: 20px;
@@ -91,76 +83,51 @@ h2 {
     border-radius: 10px;
     text-align: center;
 }
-
-/* FORM */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* BUTTONS */
-button, .btn-custom {
-    background: #2e7d32;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover, .btn-custom:hover {
-    background: #1b5e20;
-}
 </style>
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="mb-3">
+<!-- Header -->
+<header>
     <h1>Healthy Journey Recipes</h1>
-    <p>www.healthyjourneyrecipes.com</p>
     <p>Your Guide to a Healthy Lifestyle</p>
 </header>
 
-<!-- ===== NAVIGATION ===== -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
-    <div class="container">
-        <a class="navbar-brand" href="#">Healthy Journey</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#home">Home</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#recipes">Healthy Recipes</a>
-                <a class="nav-link" href="#tips">Healthy Tips</a>
-                <a class="nav-link" href="#gallery">Gallery</a>
-                <a class="nav-link" href="#blog">Blog</a>
-                <a class="nav-link" href="#contact">Contact</a>
-            </div>
-        </div>
+  <div class="container">
+    <a class="navbar-brand" href="#">Healthy Journey</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#recipes">Recipes</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#blog">Blog</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
     </div>
+  </div>
 </nav>
 
-<!-- ===== HOME + CAROUSEL ===== -->
-<section id="home" class="container mb-5">
+<main class="container">
+
+<!-- Home Section -->
+<section id="home" class="mb-5">
     <h2>Home</h2>
     <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="d-block w-100 rounded" alt="...">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="d-block w-100 rounded" alt="Healthy dishes">
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="d-block w-100 rounded" alt="...">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="d-block w-100 rounded" alt="Vegetable salad">
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="d-block w-100 rounded" alt="...">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="d-block w-100 rounded" alt="Fruit smoothie">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -170,81 +137,86 @@ button:hover, .btn-custom:hover {
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-    <p>Welcome to Healthy Journey Recipes! We provide simple, nutritious, and delicious recipes.</p>
+    <p>Explore nutritious meals, delicious smoothies, and tips for a healthier lifestyle.</p>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about" class="container mb-5">
+<!-- About Section -->
+<section id="about" class="mb-5">
     <h2>About Us</h2>
-    <p>Healthy Journey Recipes promotes healthy eating habits.</p>
+    <p>Healthy Journey Recipes promotes healthy eating habits, providing simple and delicious recipes, tips, and guides to improve your daily lifestyle.</p>
 </section>
 
-<!-- ===== RECIPES ===== -->
-<section id="recipes" class="container mb-5">
+<!-- Recipes Section -->
+<section id="recipes" class="mb-5">
     <h2>Healthy Recipes</h2>
     <div class="row">
-        <div class="col-md-4"><div class="card card-custom p-3">Vegetable Salad</div></div>
-        <div class="col-md-4"><div class="card card-custom p-3">Fruit Smoothie</div></div>
-        <div class="col-md-4"><div class="card card-custom p-3">Oats Breakfast</div></div>
+        <div class="col-md-4"><div class="card card-custom p-3">
+            <h5>Vegetable Salad</h5>
+            <p>Fresh seasonal vegetables tossed in a light olive oil dressing.</p>
+        </div></div>
+        <div class="col-md-4"><div class="card card-custom p-3">
+            <h5>Fruit Smoothie</h5>
+            <p>A blend of fresh fruits for a nutritious morning boost.</p>
+        </div></div>
+        <div class="col-md-4"><div class="card card-custom p-3">
+            <h5>Oats Breakfast</h5>
+            <p>Healthy oatmeal with nuts and berries for a perfect start to your day.</p>
+        </div></div>
     </div>
 </section>
 
-<!-- ===== HEALTHY TIPS (ACCORDION) ===== -->
-<section id="tips" class="container mb-5">
-    <h2>Healthy Tips</h2>
-    <button class="accordion-custom">Diet Tips</button>
-    <div class="panel">
-        <p>Eat fruits, vegetables, and drink water.</p>
-    </div>
-
-    <button class="accordion-custom">Workout Tips</button>
-    <div class="panel">
-        <p>Do yoga, cardio, and regular exercise.</p>
-    </div>
-</section>
-
-<!-- ===== GALLERY ===== -->
-<section id="gallery" class="container mb-5">
+<!-- Gallery Section -->
+<section id="gallery" class="mb-5">
     <h2>Gallery</h2>
+    <div class="mb-3 text-center">
+        <button class="btn btn-success filter-btn" data-category="all">All</button>
+        <button class="btn btn-success filter-btn" data-category="fruits">Fruits</button>
+        <button class="btn btn-success filter-btn" data-category="veggies">Vegetables</button>
+        <button class="btn btn-success filter-btn" data-category="smoothies">Smoothies</button>
+    </div>
     <div class="d-flex flex-wrap justify-content-center gallery">
-        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="m-2 rounded" alt="img1">
-        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="m-2 rounded" alt="img2">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="m-2 rounded" alt="img3">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="gallery-item veggies m-2 rounded" alt="Salad">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="gallery-item smoothies m-2 rounded" alt="Smoothie">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="gallery-item fruits m-2 rounded" alt="Fruits">
     </div>
 </section>
 
-<!-- ===== BLOG ===== -->
-<section id="blog" class="container mb-5">
+<!-- Blog Section -->
+<section id="blog" class="mb-5">
     <h2>Blog</h2>
     <div class="row">
-        <div class="col-md-6"><div class="card card-custom p-3">Why Healthy Eating Matters</div></div>
-        <div class="col-md-6"><div class="card card-custom p-3">Easy Daily Diet Plan</div></div>
+        <div class="col-md-6"><div class="card card-custom p-3">
+            <h5>Why Healthy Eating Matters</h5>
+            <p>Discover the benefits of a balanced diet and how it can improve your daily life.</p>
+        </div></div>
+        <div class="col-md-6"><div class="card card-custom p-3">
+            <h5>Easy Daily Diet Plan</h5>
+            <p>Follow our simple meal plan to maintain energy and stay healthy throughout the week.</p>
+        </div></div>
     </div>
 </section>
 
-<!-- ===== JOIN US (MODAL BUTTON) ===== -->
-<section class="container mb-5 text-center">
+<!-- Join Us Modal Button -->
+<section class="mb-5 text-center">
     <h2>Join Us</h2>
     <button class="btn btn-success" onclick="openModal()">Join Now</button>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="container mb-5">
+<!-- Contact Section -->
+<section id="contact" class="mb-5">
     <h2>Contact Us</h2>
-    <form>
-        <input type="text" class="form-control mb-2" placeholder="Name">
-        <input type="email" class="form-control mb-2" placeholder="Email">
-        <textarea class="form-control mb-2" placeholder="Message"></textarea>
+    <form id="contactForm">
+        <input type="text" id="name" class="form-control mb-2" placeholder="Name">
+        <input type="email" id="email" class="form-control mb-2" placeholder="Email">
+        <textarea id="message" class="form-control mb-2" placeholder="Message"></textarea>
         <button type="submit" class="btn btn-success">Send</button>
+        <div id="formAlert"></div>
     </form>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-success text-white text-center p-3">
-    <p>&copy; 2026 Healthy Journey Recipes</p>
-</footer>
+</main>
 
-<!-- ===== MODAL ===== -->
+<!-- Modal -->
 <div class="modal-custom" id="myModal">
     <div class="modal-content-custom">
         <h3>Welcome!</h3>
@@ -253,25 +225,63 @@ button:hover, .btn-custom:hover {
     </div>
 </div>
 
-<!-- ===== JAVASCRIPT ===== -->
+<!-- Footer -->
+<footer class="text-center">
+    <p>&copy; 2026 Kamaljit Kaur M | 
+        <a href="mailto:kamaljit@example.com" class="text-white">Contact</a> | 
+        <a href="#" class="text-white">Facebook</a> | 
+        <a href="#" class="text-white">Instagram</a>
+    </p>
+</footer>
+
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Accordion
-let acc = document.getElementsByClassName("accordion-custom");
-for (let i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-        let panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
+// ===== Form Validation =====
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    if(form) {
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const alertBox = document.getElementById("formAlert");
+            
+            if(!name || !email || !message){
+                alertBox.className = "alert alert-danger mt-2";
+                alertBox.innerText = "Please fill all fields.";
+            } else if(!email.match(/^\S+@\S+\.\S+$/)){
+                alertBox.className = "alert alert-danger mt-2";
+                alertBox.innerText = "Please enter a valid email.";
+            } else {
+                alertBox.className = "alert alert-success mt-2";
+                alertBox.innerText = "Message sent successfully!";
+                form.reset();
+            }
+        });
     }
-}
+});
 
-// Modal
-function openModal() {
-    document.getElementById("myModal").style.display = "block";
-}
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-}
+// ===== Gallery Filter =====
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const category = btn.dataset.category;
+        galleryItems.forEach(item => {
+            if(category === "all" || item.classList.contains(category)){
+                item.style.display = "inline-block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});
+
+// ===== Modal =====
+function openModal(){ document.getElementById("myModal").style.display = "block"; }
+function closeModal(){ document.getElementById("myModal").style.display = "none"; }
 </script>
 
 </body>
