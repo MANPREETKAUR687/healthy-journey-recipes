@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Healthy Journey Recipes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5fff5;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/*  DARK MODE */
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark header,
+body.dark nav,
+body.dark footer {
+    background: #1e1e1e;
+}
+
+body.dark .card {
+    background: #2c2c2c;
+}
+
+header {
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #1b5e20;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+.carousel img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.accordion {
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.panel {
+    display: none;
+    background: #e8f5e9;
+    padding: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Healthy Journey Recipes</h1>
+<p>www.healthyjourneyrecipes.com</p>
+<p>Your Guide to a Healthy Lifestyle</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#recipes">Healthy Recipes</a>
+<a href="#tips">Healthy Tips</a>
+<a href="#gallery">Gallery</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+
+<!--  DARK MODE BUTTON -->
+<button onclick="toggleTheme()"></button>
+</nav>
+
+<section id="home">
+<div class="container">
+<h2>Home</h2>
+
+<div class="carousel">
+<img id="slide" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+</div>
+
+<br>
+<button onclick="nextSlide()">Next Image</button>
+
+<p>Welcome to Healthy Journey Recipes! We provide simple, nutritious, and delicious recipes.</p>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2>About Us</h2>
+<p>Healthy Journey Recipes promotes healthy eating habits.</p>
+</div>
+</section>
+
+<section id="recipes">
+<div class="container">
+<h2>Healthy Recipes</h2>
+
+<div class="card">Vegetable Salad</div>
+<div class="card">Fruit Smoothie</div>
+<div class="card">Oats Breakfast</div>
+
+</div>
+</section>
+
+<section id="tips">
+<div class="container">
+<h2>Healthy Tips</h2>
+
+<button class="accordion">Diet Tips</button>
+<div class="panel">
+<p>Eat fruits, vegetables, and drink water.</p>
+</div>
+
+<button class="accordion">Workout Tips</button>
+<div class="panel">
+<p>Do yoga, cardio, and regular exercise.</p>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+</div>
+</div>
+</section>
+
+<section id="blog">
+<div class="container">
+<h2>Blog</h2>
+
+<div class="card">Why Healthy Eating Matters</div>
+<div class="card">Easy Daily Diet Plan</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Join Us</h2>
+<button onclick="openModal()">Join Now</button>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Send</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Healthy Journey Recipes</p>
+</footer>
+
+<div class="modal" id="myModal">
+<div class="modal-content">
+<h3>Welcome!</h3>
+<p>Thanks for joining Healthy Journey</p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script>
+
+/* 🌙 DARK MODE FUNCTION */
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+window.onload = function () {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add("dark");
+    }
+}
+
+/* CAROUSEL */
+let images = [
+"https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+"https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+"https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+];
+
+let index = 0;
+
+function nextSlide() {
+    index = (index + 1) % images.length;
+    document.getElementById("slide").src = images[index];
+}
+
+/* ACCORDION */
+let acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+        let panel = this.nextElementSibling;
+        panel.style.display =
+        panel.style.display === "block" ? "none" : "block";
+    }
+}
+
+/* MODAL */
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
