@@ -2,126 +2,277 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthy Journey Recipes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- ===== BOOTSTRAP CSS ===== -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== CUSTOM CSS ===== */
+body {
+    background-color: #f5fff5;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* NAVIGATION OVERRIDE */
+.navbar-nav .nav-link {
+    font-weight: bold;
+}
+
+/* HEADINGS */
+h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.card-custom {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* ACCORDION CUSTOM */
+.accordion-custom {
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.panel {
+    display: none;
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* MODAL */
+.modal-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content-custom {
+    background: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+button, .btn-custom {
+    background: #2e7d32;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn-custom:hover {
+    background: #1b5e20;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <div class="container">
-    <a class="navbar-brand" href="#">Healthy Recipes</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- ===== HEADER ===== -->
+<header class="mb-3">
+    <h1>Healthy Journey Recipes</h1>
+    <p>www.healthyjourneyrecipes.com</p>
+    <p>Your Guide to a Healthy Lifestyle</p>
+</header>
 
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#recipes">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-      <button class="btn btn-light ms-3" onclick="toggleTheme()"></button>
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="#">Healthy Journey</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#recipes">Healthy Recipes</a>
+                <a class="nav-link" href="#tips">Healthy Tips</a>
+                <a class="nav-link" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#blog">Blog</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="container mt-4 text-center">
-<h1>Welcome to Healthy Journey</h1>
-<p>Simple and healthy recipes for everyone</p>
+<!-- ===== HOME + CAROUSEL ===== -->
+<section id="home" class="container mb-5">
+    <h2>Home</h2>
+    <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="d-block w-100 rounded" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="d-block w-100 rounded" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="d-block w-100 rounded" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <p>Welcome to Healthy Journey Recipes! We provide simple, nutritious, and delicious recipes.</p>
 </section>
 
-<!-- CAROUSEL -->
-<div id="carouselExample" class="carousel slide container mt-4" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="d-block w-100" alt="food">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="d-block w-100" alt="food">
-    </div>
-  </div>
-</div>
-
-<!-- CARDS -->
-<section id="recipes" class="container mt-5">
-<h2 class="text-center">Recipes</h2>
-<div class="row">
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">Vegetable Salad</div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">Fruit Smoothie</div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">Oats Breakfast</div>
-    </div>
-  </div>
-</div>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="container mb-5">
+    <h2>About Us</h2>
+    <p>Healthy Journey Recipes promotes healthy eating habits.</p>
 </section>
 
-<!-- ACCORDION -->
-<section class="container mt-5">
-<h2>Tips</h2>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Diet Tips</button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show">
-      <div class="accordion-body">Eat fruits and vegetables.</div>
+<!-- ===== RECIPES ===== -->
+<section id="recipes" class="container mb-5">
+    <h2>Healthy Recipes</h2>
+    <div class="row">
+        <div class="col-md-4"><div class="card card-custom p-3">Vegetable Salad</div></div>
+        <div class="col-md-4"><div class="card card-custom p-3">Fruit Smoothie</div></div>
+        <div class="col-md-4"><div class="card card-custom p-3">Oats Breakfast</div></div>
     </div>
-  </div>
-</div>
 </section>
 
-<!-- MODAL BUTTON -->
-<div class="text-center mt-4">
-<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Join Us</button>
-</div>
-
-<!-- MODAL -->
-<div class="modal fade" id="exampleModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">Welcome to Healthy Journey!</div>
+<!-- ===== HEALTHY TIPS (ACCORDION) ===== -->
+<section id="tips" class="container mb-5">
+    <h2>Healthy Tips</h2>
+    <button class="accordion-custom">Diet Tips</button>
+    <div class="panel">
+        <p>Eat fruits, vegetables, and drink water.</p>
     </div>
-  </div>
-</div>
 
-<!-- CONTACT FORM -->
-<section id="contact" class="container mt-5">
-<h2>Contact</h2>
-<form onsubmit="return validateForm()">
-<input id="email" class="form-control mb-2" placeholder="Email">
-<button class="btn btn-success">Submit</button>
-</form>
+    <button class="accordion-custom">Workout Tips</button>
+    <div class="panel">
+        <p>Do yoga, cardio, and regular exercise.</p>
+    </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-<p>© 2026 Kamaljit Kaur | <a href="https://github.com/your-username" class="text-white">GitHub</a></p>
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="container mb-5">
+    <h2>Gallery</h2>
+    <div class="d-flex flex-wrap justify-content-center gallery">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="m-2 rounded" alt="img1">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="m-2 rounded" alt="img2">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="m-2 rounded" alt="img3">
+    </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section id="blog" class="container mb-5">
+    <h2>Blog</h2>
+    <div class="row">
+        <div class="col-md-6"><div class="card card-custom p-3">Why Healthy Eating Matters</div></div>
+        <div class="col-md-6"><div class="card card-custom p-3">Easy Daily Diet Plan</div></div>
+    </div>
+</section>
+
+<!-- ===== JOIN US (MODAL BUTTON) ===== -->
+<section class="container mb-5 text-center">
+    <h2>Join Us</h2>
+    <button class="btn btn-success" onclick="openModal()">Join Now</button>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="container mb-5">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" class="form-control mb-2" placeholder="Name">
+        <input type="email" class="form-control mb-2" placeholder="Email">
+        <textarea class="form-control mb-2" placeholder="Message"></textarea>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-success text-white text-center p-3">
+    <p>&copy; 2026 Healthy Journey Recipes</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ===== MODAL ===== -->
+<div class="modal-custom" id="myModal">
+    <div class="modal-content-custom">
+        <h3>Welcome!</h3>
+        <p>Thanks for joining Healthy Journey</p>
+        <button class="btn btn-success" onclick="closeModal()">Close</button>
+    </div>
+</div>
 
-<!-- External JS -->
-<script src="js/script.js"></script>
+<!-- ===== JAVASCRIPT ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Accordion
+let acc = document.getElementsByClassName("accordion-custom");
+for (let i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+        let panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    }
+}
+
+// Modal
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
